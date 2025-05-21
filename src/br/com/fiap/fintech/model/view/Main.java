@@ -8,6 +8,15 @@ public static void main(String[] args) {
         System.out.println("Nome: " + usuario.getNome());
         System.out.println("Email: " + usuario.getEmail());
 // Criando e testando a classe br.com.fiap.fintech.model.usuario.br.com.fiap.fintech.model.usuario.Saldo
+
+        UsuarioDAO novousuario = new UsuarioDAO("João Silva", "joao.silva@email.com");
+        System.out.println("Nome: " + usuario.getNome());
+        System.out.println("Email: " + usuario.getEmail());
+
+
+
+
+        
         Saldo saldo = new Saldo(1000.0);
         System.out.println("br.com.fiap.fintech.model.usuario.br.com.fiap.fintech.model.usuario.Saldo inicial: " + saldo.getSaldo());
         saldo.adicionarSaldo(500.0);
