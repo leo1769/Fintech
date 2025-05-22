@@ -4,19 +4,15 @@ import br.com.fiap.fintech.model.usuario.Saldo;
 import br.com.fiap.fintech.model.usuario.CadastroUsuario;
 
 public static void main(String[] args) {
-        CadastroUsuario usuario = new CadastroUsuario("João Silva", "joao.silva@email.com");
+        CadastroUsuario usuario = new CadastroUsuario("leonardo", "leonardo.silva@email.com");
         System.out.println("Nome: " + usuario.getNome());
         System.out.println("Email: " + usuario.getEmail());
 // Criando e testando a classe br.com.fiap.fintech.model.usuario.br.com.fiap.fintech.model.usuario.Saldo
 
-        UsuarioDAO novousuario = new UsuarioDAO("João Silva", "joao.silva@email.com");
-        System.out.println("Nome: " + usuario.getNome());
-        System.out.println("Email: " + usuario.getEmail());
+        Usuario novoUsuario = new Usuario("Rodrigo", "rodrigo.silva@email.com", "15");
+        UsuarioDAO dao = DAOFactory.getUsuarioDAO();
+        dao.cadastrar(novoUsuario);
 
-
-
-
-        
         Saldo saldo = new Saldo(1000.0);
         System.out.println("br.com.fiap.fintech.model.usuario.br.com.fiap.fintech.model.usuario.Saldo inicial: " + saldo.getSaldo());
         saldo.adicionarSaldo(500.0);
